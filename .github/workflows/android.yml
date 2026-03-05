@@ -17,17 +17,19 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # GitHub-ன் அதிகாரப்பூர்வ பில்டர் கருவியைப் பயன்படுத்துகிறோம்
-    # இது எல்லா ஃபோல்டர்களையும் செக் செய்து தானாகவே பில்ட் செய்யும்
-    - name: Build with Gradle Action
-      uses: gradle/gradle-build-action@v3
+    # இந்த ஸ்டெப் மிக முக்கியம்! 
+    # இது gradlew இல்லாமலேயே Gradle 8.2-ஐ GitHub-ல் செட் செய்யும்.
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
       with:
-        arguments: assembleDebug 
-        # இதைக் கொடுத்தால் gradlew இல்லாமலேயே பில்ட் ஆகும்
-        generate-job-summary: true
+        gradle-version: 8.2 
+
+    # நேரடியாக 'gradle' கமாண்ட் மூலம் பில்ட் செய்கிறோம்
+    - name: Build with Gradle
+      run: gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: LyraSaver-APK
-        path: "**/build/outputs/apk/debug/*.apk" # எல்லா ஃபோல்டரிலும் APK-வைத் தேடும்
+        path: app/build/outputs/apk/debug/*.apk
