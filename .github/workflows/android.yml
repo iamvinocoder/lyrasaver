@@ -18,11 +18,11 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
+    # இந்த ஸ்டெப் தான் முக்கியமான மாற்றம் (gradlew தேவையில்லை)
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v3
+      with:
+        arguments: assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
