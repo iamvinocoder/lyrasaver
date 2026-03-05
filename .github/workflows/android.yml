@@ -17,16 +17,17 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Install Gradle
-      run: |
-        sudo apt-get update
-        sudo apt-get install gradle -y
-
-    - name: Build with Gradle
-      run: gradle :app:assembleDebug 
+    # GitHub-ன் அதிகாரப்பூர்வ பில்டர் கருவியைப் பயன்படுத்துகிறோம்
+    # இது எல்லா ஃபோல்டர்களையும் செக் செய்து தானாகவே பில்ட் செய்யும்
+    - name: Build with Gradle Action
+      uses: gradle/gradle-build-action@v3
+      with:
+        arguments: assembleDebug 
+        # இதைக் கொடுத்தால் gradlew இல்லாமலேயே பில்ட் ஆகும்
+        generate-job-summary: true
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: LyraSaver-APK
-        path: app/build/outputs/apk/debug/*.apk
+        path: "**/build/outputs/apk/debug/*.apk" # எல்லா ஃபோல்டரிலும் APK-வைத் தேடும்
