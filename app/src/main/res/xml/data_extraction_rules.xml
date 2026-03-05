@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <domain-config cloud-backup="true">
+        <domain name="sharedpref" includeFormat="xml" />
+        <domain name="database" includeFormat="xml" />
+        <domain name="file" includeFormat="xml" />
+    </domain-config>
+</data-extraction-rules>

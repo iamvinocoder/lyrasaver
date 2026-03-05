@@ -1,0 +1,63 @@
+# Gradle
+.gradle/
+build/
+*.iml
+
+# IDE
+.androidStudioPreferences
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Android
+.DS_Store
+.metadata
+.classpath
+.project
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+local.properties
+
+# Build outputs
+/app/build/
+/app/outputs/
+
+# Generated files
+gen/
+proguard_logs/
+
+# Keystore
+*.jks
+*.keystore
+*.p12
+*.pfx
+
+# Video files for testing
+*.mp4
+*.3gp
+*.webm
+
+# Temp files
+*.swp
+*.swo
+*~
+
+# Compiled
+*.class
+*.jar
+
+# Log files
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

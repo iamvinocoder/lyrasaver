@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lyra Saver</string>
+    <string name="app_version">1.0.0</string>
+    <string name="legal_disclaimer">This app is independent and not affiliated with WhatsApp Inc., WhatsApp LLC, or any of their subsidiaries or affiliates.</string>
+
+    <!-- Navigation -->
+    <string name="tab_photos">Photos</string>
+    <string name="tab_videos">Videos</string>
+    <string name="tab_tools">Tools</string>
+    <string name="tab_about">About</string>
+
+    <!-- Home Screen -->
+    <string name="no_statuses">No statuses found</string>
+    <string name="loading">Loading...</string>
+    <string name="save_status">Save Status</string>
+    <string name="repost_status">Repost to Status</string>
+    <string name="delete">Delete</string>
+    <string name="select_folder">Select WhatsApp Folder</string>
+
+    <!-- Auto-Save -->
+    <string name="auto_save">Auto-Save</string>
+    <string name="auto_save_enabled">Auto-Save is enabled</string>
+    <string name="auto_save_disabled">Auto-Save is disabled</string>
+
+    <!-- Media Cleaner -->
+    <string name="media_cleaner">Media Cleaner</string>
+    <string name="scan_media">Scan Media</string>
+    <string name="delete_sent">Delete Sent Media</string>
+    <string name="delete_cache">Delete Cache</string>
+    <string name="space_saved">Space Saved</string>
+    <string name="scanning">Scanning...</string>
+
+    <!-- Video Splitter -->
+    <string name="video_splitter">Video Splitter</string>
+    <string name="select_video">Select Video</string>
+    <string name="split_into_clips">Split into 30-second clips</string>
+    <string name="splitting">Splitting video...</string>
+
+    <!-- Deleted Messages -->
+    <string name="deleted_messages">Deleted Messages</string>
+    <string name="no_deleted_messages">No deleted messages</string>
+    <string name="enable_notification_access">Enable Notification Access</string>
+
+    <!-- About -->
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="contact_admin">Contact Admin</string>
+    <string name="email_support">support@lyrasaver.app</string>
+    <string name="rate_us">Rate Us</string>
+
+    <!-- Messages -->
+    <string name="status_saved">Status saved successfully</string>
+    <string name="status_save_failed">Failed to save status</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="grant_permission">Please grant the necessary permissions</string>
+
+    <!-- Service Labels -->
+    <string name="notification_listener_label">Lyra Saver Notification Listener</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="folder_location">Folder Location</string>
+    <string name="notifications_enabled">Notifications Enabled</string>
+
+    <!-- WhatsApp Paths -->
+    <string name="whatsapp">WhatsApp</string>
+    <string name="whatsapp_business">WhatsApp Business</string>
+    <string name="gb_whatsapp">GB WhatsApp</string>
+</resources>
