@@ -16,13 +16,16 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
-    # இந்த ஸ்டெப் தான் முக்கியமான மாற்றம் (gradlew தேவையில்லை)
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v3
-      with:
-        arguments: assembleDebug
+    # நேரடியாக Gradle-ஐ இன்ஸ்டால் செய்து ரன் செய்யும் முறை
+    - name: Install Gradle
+      run: |
+        sudo apt-get update
+        sudo apt-get install gradle -y
+
+    # gradlew பயன்படுத்தாமல் நேரடியாக 'gradle' கமாண்ட் மூலம் பில்ட் செய்தல்
+    - name: Build with Gradle
+      run: gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
